@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 22px;
+	background-image: url("https://wallpapercave.com/wp/UtwFDMx.jpg");
+	background-position: center;
+	background-attachment:fixed;
+}
+.padd{
+	padding: 30px;
+}
+.header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	transition: all 1s;
+	z-index: 1000;
+}
+
+.header-active{
+	position: fixed;
+	top: 0px;
+	z-index: 1000;
+}
+
+#err{
+    text-align: center;
+}
+
+a:hover{
+	color: #F49481;
+}
+
+nav .aimage{
+	position:absolute;
+}
+nav .image {
+	position: relative;
+	width: 50px;
+	height: auto;
+	border-radius: 100px;
+	padding: 1px;
+	margin-left: -45vw;
+	
+}
+
+li {
+    list-style-type: none;
+}
+
+
+nav {
+	position: relative;
+    display: flex;
+    justify-content: space-around;
+    min-height: 10vh;
+    align-items: center;
+    font-family: inter;
+    background-color: #cf3446; /* #ff5f6d */
+    color: #fff;
+}
+
+nav .logo {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+nav .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+	margin: 5px ;
+}
+
+nav .nav-links a {
+    font-size: 22px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+
+nav .burger{
+    cursor: pointer;
+	display:flex;
+	justify-content:left;
+	align-items: left;
+	transform: translateX(-100vw);
+}
+
+nav .nav-links a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+a {
+	color: #8B0000;
+	text-decoration: none;
+}
+
+.active{
+    color: #ffffff;
+}
+
+@media all and (max-width: 768px){
+    nav .nav-links{
+		transform: translateX(-10000vw);
+	}
+	nav .burger{
+		transform: translateX(0px);
+	}
+	nav .image {
+		margin-left: 70vw;
+	}
+}
+
+nav .burger-links{
+    position: absolute;
+	z-index: 3;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px; /* */
+    background-color: #da3e4b;
+    padding: 20px;
+    padding-top: 30px;
+    transform: translateX(-100vw);
+    transition: 0.5s ease-in-out;
+}
+
+nav .burger-links .burger{
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+nav .burger-links li {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+nav .burger-links li:last-of-type {
+    border-bottom: 0px solid #ccc;
+}
+
+nav .burger-links a{
+    cursor: pointer;
+}
